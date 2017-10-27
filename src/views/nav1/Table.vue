@@ -58,7 +58,7 @@
 		<el-table @cell-click="cellChange" :data="users" border v-loading="listLoading" @selection-change="selsChange" style="width: 100%;">
 			<el-table-column type="selection" width="55" >
 			</el-table-column>
-			<el-table-column  prop="userId" label="用户ID" idth="60" >
+			<el-table-column  prop="userId" label="用户ID" width="80">
 			</el-table-column>
 			<el-table-column class="labelImg" prop="" label="头像" width="80"  >
 				<template scope="scope">
@@ -136,8 +136,8 @@
 		</el-dialog>
 
 		<!--新增界面-->
-		<el-dialog  custom-class="addForm" title="注册用户" size="" v-model="addFormVisible" :close-on-click-modal="false">
-			<el-form :model="addForm" label-width="200" :rules="addFormRules" ref="addForm">
+		<el-dialog  custom-class="addForm" title="注册用户" size="mini" v-model="addFormVisible" :close-on-click-modal="false">
+			<el-form label-posistion="left" inline="true" :model="addForm" label-width="200" :rules="addFormRules" ref="addForm">
 				<el-form-item label="账号" prop="name">
 					<el-input size="small"  placeholder="请输入账号"   v-model="addForm.name" auto-complete="off"  ></el-input>
 				</el-form-item>
@@ -437,8 +437,6 @@ import {freshScrollbar} from"@/common/js/public"
 			},
 			editFormVisible(){
 				this.$nextTick(()=>{
-
-					
 					freshScrollbar(this.editFormVisible,document.getElementById('content-container'))
 				})
 			}

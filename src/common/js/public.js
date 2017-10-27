@@ -9,14 +9,13 @@ export const getStyle = (element, attr, NumberMode = 'int') => {
         target = document.defaultView.getComputedStyle(element,null)[attr];
     }
     //在获取 opactiy 时需要获取小数 parseFloat
-    return  NumberMode == 'float'? parseFloat(target) : parseInt(target);
+    return  NumberMode == 'float'? parseFloat(target) : Math.floor(target);
 }
 
 export const freshScrollbar =(bool,el)=>{//smooth-scrollbar解决scrollbar导致el-dialog不显示问题
   if(bool){
-    
     el.firstChild.setAttribute("class","")
-    setTimeout(()=>{
+    setTimeout(()=>{//延迟加载,去掉style
       el.firstChild.setAttribute("style","")
     })
   }else{
