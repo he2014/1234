@@ -221,7 +221,7 @@ import {freshScrollbar} from"@/common/js/public"
 				},
 				//新增界面数据
 				addForm: {
-					name: '',
+					name: "",
 					nk: "",
 					pawd: "",
 					sex: '女'
@@ -413,7 +413,7 @@ import {freshScrollbar} from"@/common/js/public"
 					customClass:"tableChange"
 				});
 				console.log(this.rowUserId )
- 
+
 				//console.log(e)
 			},
 			cellChange(row, column, cell, event){
