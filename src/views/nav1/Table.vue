@@ -413,7 +413,7 @@ import {freshScrollbar} from"@/common/js/public"
 					customClass:"tableChange"
 				});
 				console.log(this.rowUserId )
-
+ 
 				//console.log(e)
 			},
 			cellChange(row, column, cell, event){
